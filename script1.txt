@@ -1,0 +1,226 @@
+Script started on Tue Sep 29 16:33:03 2015
+sh-3.00$ /usr/local/bin/gdb Assignment1
+[?1034hGNU gdb 6.8
+Copyright (C) 2008 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "sparc-sun-solaris2.10"...
+(no debugging symbols found)
+(gdb) b main
+Breakpoint 1 at 0x106e8
+(gdb) r
+Starting program: /home/ugc/mjtang/Desktop/Projects/Assignment1 
+(no debugging symbols found)
+(no debugging symbols found)
+
+Breakpoint 1, 0x000106e8 in main ()
+(gdb) display/i $pc
+1: x/i $pc
+0x106e8 <main+4>:       mov  -2, %l1
+(gdb) ni
+0x000106ec in main ()
+1: x/i $pc
+0x106ec <main+8>:       mov  0x3e8, %l5
+(gdb) ni
+0x000106f0 in main ()
+1: x/i $pc
+0x106f0 <main+12>:      b  0x107bc <test>
+0x106f4 <main+16>:      nop 
+(gdb) ni
+0x000106f4 in main ()
+1: x/i $pc
+0x106f4 <main+16>:      nop 
+(gdb) ni
+0x000107bc in test ()
+1: x/i $pc
+0x107bc <test>: cmp  %l1, 0xb
+(gdb) ni
+0x000107c0 in test ()
+1: x/i $pc
+0x107c0 <test+4>:       ble  0x106f8 <loop>
+0x107c4 <test+8>:       nop 
+(gdb) ni
+0x000107c4 in test ()
+1: x/i $pc
+0x107c4 <test+8>:       nop 
+(gdb) ni
+0x000106f8 in loop ()
+1: x/i $pc
+0x106f8 <loop>: mov  %l1, %o0
+(gdb) ni
+0x000106fc in loop ()
+1: x/i $pc
+0x106fc <loop+4>:       mov  %l1, %o1
+(gdb) ni
+0x00010700 in loop ()
+1: x/i $pc
+0x10700 <loop+8>:       call  0x20904 <.mul@plt>
+0x10704 <loop+12>:      nop 
+(gdb) ni
+0x00010704 in loop ()
+1: x/i $pc
+0x10704 <loop+12>:      nop 
+(gdb) ni
+0x00010708 in loop ()
+1: x/i $pc
+0x10708 <loop+16>:      mov  %l1, %o1
+(gdb) ni
+0x0001070c in loop ()
+1: x/i $pc
+0x1070c <loop+20>:      call  0x20904 <.mul@plt>
+0x10710 <loop+24>:      nop 
+(gdb) ni
+0x00010710 in loop ()
+1: x/i $pc
+0x10710 <loop+24>:      nop 
+(gdb) ni
+0x00010714 in loop ()
+1: x/i $pc
+0x10714 <loop+28>:      mov  2, %o1     ! 0x2
+(gdb) ni
+0x00010718 in loop ()
+1: x/i $pc
+0x10718 <loop+32>:      call  0x20904 <.mul@plt>
+0x1071c <loop+36>:      nop 
+(gdb) ni
+0x0001071c in loop ()
+1: x/i $pc
+0x1071c <loop+36>:      nop 
+(gdb) ni
+0x00010720 in loop ()
+1: x/i $pc
+0x10720 <loop+40>:      mov  %o0, %l0
+(gdb) ni
+0x00010724 in loop ()
+1: x/i $pc
+0x10724 <loop+44>:      mov  %l1, %o0
+(gdb) ni
+0x00010728 in loop ()
+1: x/i $pc
+0x10728 <loop+48>:      mov  %l1, %o1
+(gdb) ni
+0x0001072c in loop ()
+1: x/i $pc
+0x1072c <loop+52>:      call  0x20904 <.mul@plt>
+0x10730 <loop+56>:      nop 
+(gdb) ni
+0x00010730 in loop ()
+1: x/i $pc
+0x10730 <loop+56>:      nop 
+(gdb) ni
+0x00010734 in loop ()
+1: x/i $pc
+0x10734 <loop+60>:      mov  0x12, %o1  ! 0x12
+(gdb) p $l0
+$1 = -16
+(gdb) p $l0[3Pni
+0x00010738 in loop ()
+1: x/i $pc
+0x10738 <loop+64>:      call  0x20904 <.mul@plt>
+0x1073c <loop+68>:      nop 
+(gdb) ni
+0x0001073c in loop ()
+1: x/i $pc
+0x1073c <loop+68>:      nop 
+(gdb) ni
+0x00010740 in loop ()
+1: x/i $pc
+0x10740 <loop+72>:      mov  %o0, %l3
+(gdb) ni
+0x00010744 in loop ()
+1: x/i $pc
+0x10744 <loop+76>:      sub  %l0, %l3, %l0
+(gdb) ni
+0x00010748 in loop ()
+1: x/i $pc
+0x10748 <loop+80>:      mov  %l1, %o0
+(gdb)p $l0[3Pnip $l0
+$2 = -88
+(gdb) ni
+0x0001074c in loop ()
+1: x/i $pc
+0x1074c <loop+84>:      mov  0xa, %o1
+(gdb) ni
+0x00010750 in loop ()
+1: x/i $pc
+0x10750 <loop+88>:      call  0x20904 <.mul@plt>
+0x10754 <loop+92>:      nop 
+(gdb) ni
+0x00010754 in loop ()
+1: x/i $pc
+0x10754 <loop+92>:      nop 
+(gdb) ni
+0x00010758 in loop ()
+1: x/i $pc
+0x10758 <loop+96>:      mov  %o0, %l4
+(gdb) ni
+0x0001075c in loop ()
+1: x/i $pc
+0x1075c <loop+100>:     add  %l0, %l4, %l0
+(gdb) ni
+0x00010760 in loop ()
+1: x/i $pc
+0x10760 <loop+104>:     add  %l0, 0x27, %l0
+(gdb) ni
+0x00010764 in loop ()
+1: x/i $pc
+0x10764 <loop+108>:     sethi  %hi(0x10400), %o0
+(gdb) ni
+0x00010768 in loop ()
+1: x/i $pc
+0x10768 <loop+112>:     or  %o0, 0x2ac, %o0     ! 0x106ac <fmt>
+(gdb)p $l0
+$3 = -69
+(gdb) p $l0[3Pni
+0x0001076c in loop ()
+1: x/i $pc
+0x1076c <loop+116>:     mov  %l5, %o1
+(gdb) ni
+0x00010770 in loop ()
+1: x/i $pc
+0x10770 <loop+120>:     mov  %l1, %o2
+(gdb) ni
+0x00010774 in loop ()
+1: x/i $pc
+0x10774 <loop+124>:     cmp  %l0, %l5
+(gdb) ni
+0x00010778 in loop ()
+1: x/i $pc
+0x10778 <loop+128>:     ble  0x107a4 <next>
+0x1077c <loop+132>:     nop 
+(gdb) ni
+0x0001077c in loop ()
+1: x/i $pc
+0x1077c <loop+132>:     nop 
+(gdb) ni
+(no debugging symbols found)
+The current minimum contains y value -69 and x value -2
+0x00010758 in loop ()
+1: x/i $pc
+0x10758 <loop+96>:      mov  %o0, %l4
+(gdb) continuing
+Undefined command: "continuing".  Try "help".
+(gdb) c
+Continuing.
+The current minimum contains y value -69 and x value -2
+The current minimum contains y value -69 and x value -2
+The current minimum contains y value -69 and x value -2
+The current minimum contains y value -69 and x value -2
+The current minimum contains y value -69 and x value -2
+The current minimum contains y value -81 and x value 4
+The current minimum contains y value -111 and x value 5
+The current minimum contains y value -117 and x value 6
+The current minimum contains y value -117 and x value 6
+The current minimum contains y value -117 and x value 6
+The current minimum contains y value -117 and x value 6
+The current minimum contains y value -117 and x value 6
+The current minimum contains y value -117 and x value 6
+
+Program exited with code 070.
+(gdb) q
+sh-3.00$ exit
+exit
+
+script done on Tue Sep 29 16:37:27 2015
